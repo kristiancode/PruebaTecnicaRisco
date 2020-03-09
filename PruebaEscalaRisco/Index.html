@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="css/Estilos.css">
+
+    <title>Solución prueba tecnica</title>
+</head>
+<body>
+    <!-- header-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4"> Programa de medición de escala al risco</h1>
+          <p class="lead">Este programa determinará el peso de los elementos que permitan la escalada al risco.</p>
+        </div>
+    </div>
+    <!-- fin header-->
+
+    <!-- inicio imagenes-->
+    <div class="container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/img2.jpg" class="d-block w-100" alt="Escalada al risco">
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- fin imagenes-->
+<br />
+<br />
+
+    <div class="container">
+        <h2 class="ColorTexto">Requisitos para la escalada del risco</h2>
+        <p class="ColorTexto"><i>Minimo de calorias</i>: <strong>100</strong>
+        <p class="ColorTexto"><i>Minimo de peso corporal y equipamiento de escala</i>: <strong>30</strong></p>
+        <hr class="ColorLinea" />
+        <br />
+        <h3 class="parrafo">Datos para la aprobación de escala del risco</h3>
+        <br />
+        <form action="condicionRisco.php" method="POST">
+            <div class="form-group col-md-6">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" class="form-control" id="Nombre" name="nombre" required />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Peso">Peso corporal y de los elementos:</label>
+                <input type="text" class="form-control" id="Peso" name="pesoCompleto" required pattern="[0-9]+" placeholder="Ingrese solo numeros" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Calorias">Calorias:</label>
+                <input type="text" class="form-control" id="Calorias" name="calorias" required pattern="[0-9]+" placeholder="Ingrese solo numeros" /><br />
+                <input class="btn btn-primary" type="submit" value="Insertar" name="insertar">
+            </div>            
+        </form>
+    </div>
+</body>
+</html>
